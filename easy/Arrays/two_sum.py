@@ -36,13 +36,21 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-        flag = False
-        print(nums)
-        for i in range(0, len(nums)):
-            for j in range(1, len(nums)):
-                if ((nums[i] + nums[j]) == target) and (i != j):
-                    flag = True
-                    break
-            if flag == True:
-                break
-        return [i, j]
+    #     flag = False
+    #     print(nums)
+    #     for i in range(0, len(nums)):
+    #         for j in range(1, len(nums)):
+    #             if ((nums[i] + nums[j]) == target) and (i != j):
+    #                 flag = True
+    #                 break
+    #         if flag == True:
+    #             break
+    #     return [i, j]
+
+#  Optimized solution using a dictionary to store the indices of the numbers
+        result = {}
+        for i in range(len(nums)):
+            temp = target - nums[i]
+            if nums[i] in result:
+                return [result[nums[i]], i]
+            result[temp] = i 
