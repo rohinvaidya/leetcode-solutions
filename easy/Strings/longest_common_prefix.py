@@ -52,4 +52,4 @@ class Solution:
                 if(s[i] != strs[0][i]):
                     return s[:i]
             i += 1
-        return s[:i]
+        return s[:i] # type: ignore
