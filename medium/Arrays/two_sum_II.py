@@ -36,7 +36,7 @@
 from typing import List
 
 class Solution:
-    def twoSum(self, numbers: List[int], target: int) -> List[int]:
+    def twoSum(self, numbers: List[int], target: int) -> List[int]: # type: ignore
         # Space Optimized solution
         # for i in range(len(numbers)):
         #     if numbers[i] == (target - numbers[i]):
