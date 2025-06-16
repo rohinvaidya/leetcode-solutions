@@ -36,17 +36,22 @@ class Solution(object):
         :type target: int
         :rtype: List[int]
         """
-    #     flag = False
-    #     print(nums)
-    #     for i in range(0, len(nums)):
-    #         for j in range(1, len(nums)):
-    #             if ((nums[i] + nums[j]) == target) and (i != j):
-    #                 flag = True
-    #                 break
-    #         if flag == True:
-    #             break
-    #     return [i, j]
+        flag = False
+        print(nums)
+        for i in range(0, len(nums)):
+            for j in range(1, len(nums)):
+                if ((nums[i] + nums[j]) == target) and (i != j):
+                    flag = True
+                    break
+            if flag == True:
+                break
+        return [i, j]
 
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        sums = {}  # Initialize an empty dictionary (hashmap)
+        for i in range(len(nums) - 1):
+            sums[i] = nums[i] + nums[i+1]  # Calculate and store the sum
+        return [sums.items().index(target), sums.items().index(target) + 1]  # Return the indices of the two numbers that add up to target
 #  Optimized solution using a dictionary to store the indices of the numbers
         result = {}
         for i in range(len(nums)):
