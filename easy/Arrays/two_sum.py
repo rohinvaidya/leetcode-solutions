@@ -54,3 +54,11 @@ class Solution(object):
             if nums[i] in result:
                 return [result[nums[i]], i]
             result[temp] = i 
+        
+        # NeetCode solution
+        # prevMap = {}
+        # for i, n in enumerate(nums):
+        #     diff = target - n
+        #     if diff in prevMap:
+        #         return [prevMap[diff], i]
+        #     prevMap[n] = i

@@ -27,3 +27,6 @@ class Solution:
             return False
         else:
             return all(s.count(x) == t.count(x) for x in 'abcdefghijklmnopqrstuvwxyz')
+        
+        # return sorted(s) == sorted(t)
+        # return Counter(s) == Counter(t)
